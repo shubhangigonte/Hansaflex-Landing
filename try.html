@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkbox Toggle Example</title>
+  <style>
+    /* Add some styles for better presentation (optional) */
+    .toggle-container {
+      display: inline-block;
+    }
+
+    .toggle-label {
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .toggle-checkbox {
+      display: none;
+    }
+
+    .toggle-slider {
+      position: relative;
+      width: 40px;
+      height: 20px;
+      background-color: #ccc;
+      border-radius: 10px;
+    }
+
+    .toggle-slider:before {
+      content: '';
+      position: absolute;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+      transition: transform 0.3s ease;
+    }
+
+    .toggle-checkbox:checked + .toggle-slider:before {
+      transform: translateX(20px);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Toggle Container -->
+  <div class="toggle-container">
+    <!-- Checkbox Label -->
+    <label class="toggle-label" for="toggleCheckbox">Toggle:</label>
+    <!-- Checkbox Input -->
+    <input type="checkbox" id="toggleCheckbox" class="toggle-checkbox" checked>
+    <!-- Toggle Slider -->
+    <div class="toggle-slider"></div>
+  </div>
+
+  <!-- Add your hyperlink if necessary -->
+  <a href="forms.html">Link to Forms</a>
+
+  <!-- Include JavaScript if needed -->
+  <!-- <script src="your-script.js"></script> -->
+
+</body>
+</html>
+
